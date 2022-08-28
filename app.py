@@ -1,0 +1,19 @@
+from django.shortcuts import render
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+	return render_template('index.html')
+
+
+@app.route('/saudacao')
+def saudacao():
+	return render_template('saudacao.html')
+
+
+if __name__ == '__main__':
+	app.run(debug=True)
+
